@@ -5,7 +5,7 @@ clear all;
 close all;
 profile off
 profile on
-SavePlots=1;
+SavePlots=0;
 
 tic;
 
