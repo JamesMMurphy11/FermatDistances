@@ -7,6 +7,9 @@ close all;
 
 setenv('PATH','/usr/bin:/usr/local/bin:/Library/TeX/texbin');
 
+%% Add appropriate paths
+addpath(genpath('../../FermatDistances')) %Ensure all relevant files are on the Matlab path
+
 
 profile off
 profile on
@@ -20,7 +23,7 @@ N=5000;
 
 %%  Make a folder for results
 
-FolderName=['~/JMLR2024_Code/JMLR2024_Code/ComparisonExperiments/Results/',DataName,'/Example_p=',num2str(p),...
+FolderName=['./JMLR2024_Code/ComparisonExperiments/Results/',DataName,'/Example_p=',num2str(p),...
     '_thresh=',num2str(thresh),'_N=',num2str(N),'_T=',num2str(NumTrials)];
 
 mkdir(FolderName)
