@@ -11,8 +11,10 @@ tic;
 
 rng(42)
 
-addpath(genpath('/Users/jmurph17/pwspd'));
+%addpath(genpath('/Users/jmurph17/pwspd'));
+addpath(genpath('../../FermatDistances'))
 setenv('PATH','/usr/bin:/usr/local/bin:/Library/TeX/texbin');
+plot_dir = './Images'; % change this to where you'd like images to be saved.
 
 n=1000; 
 Cratio=.05; 
@@ -112,7 +114,7 @@ axis equal;
 title('Geometric Cut','Interpreter','latex','FontSize',20);
 
 if SavePlots
-    cd('/Users/jmurph17/JMLR2024_Code_Camera_Ready/JMLR2024_Code/DirichletEnergies/Images')
+    cd(plot_dir)
     saveas(h,'GeometryCut.pdf');
     system('pdfcrop --verbose GeometryCut.pdf');
     delete('GeometryCut.pdf');
@@ -125,7 +127,7 @@ axis equal;
 title('Density Cut','Interpreter','latex','FontSize',20);
 
 if SavePlots
-    cd('/Users/jmurph17/JMLR2024_Code_Camera_Ready/JMLR2024_Code/DirichletEnergies/Images')
+    cd(plot_dir)
     saveas(h,'DensityCut.pdf');
     system('pdfcrop --verbose DensityCut.pdf');
     delete('DensityCut.pdf');
@@ -146,7 +148,7 @@ yticklabels(p_candidates);
 colorbar
 
 if SavePlots
-    cd('/Users/jmurph17/JMLR2024_Code_Camera_Ready/JMLR2024_Code/DirichletEnergies/Images')
+    cd(plot_dir)
     saveas(h,'OA_Geo_FD.pdf');
     system('pdfcrop --verbose OA_Geo_FD.pdf');
     delete('OA_Geo_FD.pdf');
@@ -164,7 +166,7 @@ yticklabels(p_candidates);
 colorbar
 
 if SavePlots
-    cd('/Users/jmurph17/JMLR2024_Code_Camera_Ready/JMLR2024_Code/DirichletEnergies/Images')
+    cd(plot_dir)
     saveas(h,'OA_Dens_FD.pdf');
     system('pdfcrop --verbose OA_Dens_FD.pdf');
     delete('OA_Dens_FD.pdf');

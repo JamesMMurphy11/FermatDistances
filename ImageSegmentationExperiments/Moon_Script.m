@@ -4,7 +4,7 @@ close all;
 p=2;  % density weight
 s = 3; % normalization:
 
-
+addpath(genpath('../../FermatDistances')) % ensure all auxiliary files are in the Matlab path
 rgb = imread('Data/Moon/mountain_moon_small_more_rgb_sep.jpeg');
 spatial_factor = 1.5;
 patch_rad = 2; %patch will be of size (2*patch_rad+1)^2

@@ -4,6 +4,7 @@ close all;
 p=2;  % density weight
 s = 2; % normalization:
 
+addpath(genpath('../../FermatDistances')) % ensure all auxiliary files are in the Matlab path 
 rgb =imread('Data/BlueSky/blue_sky_light_green_elongated_small.jpeg');
 spatial_factor = 3;
 patch_rad = 3;
