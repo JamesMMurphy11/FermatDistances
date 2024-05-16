@@ -21,11 +21,12 @@ The subdirectory ```/Auxiliary/``` contains a minimal version of the ```PowerWei
 
 ## Citation
 If you find this code useful, please cite our paper:
-
+```
 @article{trillos2023fermat,
   title={Fermat Distances: Metric Approximation, Spectral Convergence, and Clustering Algorithms},
   author={Trillos, Nicol{\'a}s Garc{\'\i}a and Little, Anna and McKenzie, Daniel and Murphy, James M},
   journal={arXiv preprint arXiv:2307.05750},
   year={2023}
 }
+```
 
