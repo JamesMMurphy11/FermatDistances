@@ -11,8 +11,7 @@ tic;
 
 rng(42)
 
-%addpath(genpath('/Users/jmurph17/pwspd'));
-addpath(genpath('../../FermatDistances'))
+addpath(genpath('../../FermatDistancesPublic'))
 setenv('PATH','/usr/bin:/usr/local/bin:/Library/TeX/texbin');
 plot_dir = './Images'; % change this to where you'd like images to be saved.
 
