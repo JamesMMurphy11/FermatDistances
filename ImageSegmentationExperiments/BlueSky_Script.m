@@ -1,7 +1,7 @@
 clear all;
 close all;
 
-p=2;  % density weight
+p=2.5;  % density weight
 s = 2; % normalization:
 
 addpath(genpath('../../FermatDistances')) % ensure all auxiliary files are in the Matlab path 
