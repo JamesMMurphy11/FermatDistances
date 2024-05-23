@@ -1,7 +1,7 @@
 clear all;
 close all;
 
-p=2;  % density weight
+p = 2;  % density weight
 s = 3; % normalization:
 
 addpath(genpath('../../FermatDistances')) % ensure all auxiliary files are in the Matlab path
@@ -84,8 +84,8 @@ FD_W = max(FD_W, FD_W');
 
  %% Compute regular random walk Laplacian:
  
-Deg = sparse(diag(sum(W,1)));
-Deg_inv = sparse(diag(1./sum(W,1)));
+Deg = speye(n).*sum(W,1);
+Deg_inv = speye(n).*(1./sum(W,1));
 tic
 [V,D] = eigs(Deg-W,Deg,5,'smallestreal');
 toc
@@ -93,16 +93,16 @@ toc
  
  %% Compute FD Laplacian:
  
-FD_Deg = sparse(diag(sum(FD_W,1)));
+FD_Deg = speye(n).*sum(FD_W,1);
 FD_W_weighted = sparse(size(FD_W));
 if s==2
     FD_W_weighted = FD_W;
     FD_Deg_weighted = FD_Deg;
 else
     alpha = 1-s/2;
-    FD_Deg_alpha_inv = sparse(diag(1./(sum(FD_Deg,1).^alpha)));
+    FD_Deg_alpha_inv = eye(n).*(1./(sum(FD_Deg,1).^alpha));
     FD_W_weighted = FD_Deg_alpha_inv*FD_W*FD_Deg_alpha_inv;
-    FD_Deg_weighted = sparse(diag(sum(FD_W_weighted,1)));
+    FD_Deg_weighted = eye(n).*(sum(FD_W_weighted,1));
 end
     
 [FD_V,FD_D] = eigs(FD_Deg_weighted-FD_W_weighted,FD_Deg_weighted,5,'smallestreal');
@@ -125,6 +125,24 @@ axis off
 %% Plot of just Fermat v_2
 
 figure
+imagesc(reshape(FD_V(:,2),size(reduced_rgb(:,:,1))))
+axis equal
+axis off
+
+%% Plot all:
+figure
+
+subplot(3,1,1);
+imagesc(rgb);
+axis equal
+axis off
+
+subplot(3,1,2);
+imagesc(reshape(V(:,2),size(reduced_rgb(:,:,1))))
+axis equal
+axis off
+
+subplot(3,1,3);
 imagesc(reshape(FD_V(:,2),size(reduced_rgb(:,:,1))))
 axis equal
 axis off
