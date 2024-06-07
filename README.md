@@ -16,8 +16,7 @@ For a quick demonstration, run either file in ```ImageSegmentationExperiments```
  - Eigenvalue comparison experiments (Figures 5-12) are generated via ```/ComparisonExperiments/BulkPlotsScript.m```, choosing which of the two data sets to use.
 
 ## Auxiliary code
-The subdirectory ```/Auxiliary/``` contains a minimal version of the ```PowerWeightedShortertPaths``` package developed by Daniel Mckenzie and [Steven Damelin](https://scholar.google.com/citations?hl=en&user=nVqG2rwAAAAJ&view_op=list_works&sortby=pubdate).See *Power weighted shortest paths for clustering Euclidean data.* ([arxiv link](https://arxiv.org/pdf/1905.13345)) for more information.
-
+The subdirectory ```/Auxiliary/``` contains a minimal version of the ```PowerWeightedShortertPaths``` package developed by Daniel Mckenzie and [Steven Damelin](https://scholar.google.com/citations?hl=en&user=nVqG2rwAAAAJ&view_op=list_works&sortby=pubdate).See *Power weighted shortest paths for clustering Euclidean data.* ([arxiv link](https://arxiv.org/pdf/1905.13345)) for more information.  It also contains an open source implementation of the Hungarian algorithm, courtesy of Yi Cao.  
 
 ## Citation
 If you find this code useful, please cite our paper:
