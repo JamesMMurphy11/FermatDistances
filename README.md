@@ -1,7 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # Fermat Distances: Metric Approximation, Spectral Convergence, and Clustering Algorithms
 
-This repository contains all the code necessary to replicate the experiments contained in the paper * Fermat Distances: Metric Approximation, Spectral Convergence, and Clustering Algorithms* ([arxiv link](https://arxiv.org/pdf/2307.05750)) by [Nicolás García Trillos](https://www.nicolasgarciat.com/), [Anna Little](https://www.anna-little.com/), [Daniel McKenzie](https://danielmckenzie.github.io/), and [James M. Murphy](https://jmurphy.math.tufts.edu/). 
+This repository contains all the code necessary to replicate the experiments contained in the paper *Fermat Distances: Metric Approximation, Spectral Convergence, and Clustering Algorithms* ([arxiv link](https://arxiv.org/pdf/2307.05750)) by [Nicolás García Trillos](https://www.nicolasgarciat.com/), [Anna Little](https://www.anna-little.com/), [Daniel McKenzie](https://danielmckenzie.github.io/), and [James M. Murphy](https://jmurphy.math.tufts.edu/). 
 
 ## Installation
 You will need to compile the C++ files in ```Auxiliary/PowerWeightedShortestPaths/Modified_Dijkstra/Priority_Queue``` before using this code. For this you will need a compiler, which is platform-specific. See [here](https://www.mathworks.com/support/requirements/supported-compilers.html) for further details.
